@@ -33,8 +33,15 @@ canvas.drawShapesWithBorders = false
 // Translate the origin
 canvas.translate(byX: 200, byY: 200)
 
-// Draw an ellipse at current origin location
-canvas.drawEllipse(centreX: 0, centreY: 0, width: 20, height: 300)
+// Use a loop to draw many ellipses
+for i in stride(from: 0, to: 360, by: 10) {
+    
+    // Rotate the canvas by 10 degrees each time
+    canvas.rotate(by: 10)
+    
+    // Draw an ellipse at current origin location (middle of canvas)
+    canvas.drawEllipse(centreX: 0, centreY: 0, width: 20, height: 300)
+}
 
 /*:
  ## Template code
