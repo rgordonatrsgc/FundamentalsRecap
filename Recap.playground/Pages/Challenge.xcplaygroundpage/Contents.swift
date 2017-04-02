@@ -29,12 +29,24 @@ let canvas = Canvas(width: 600, height: 400)
 
 // Draw a grid so I can plan out sizes
 canvas.lineColor = Color(hue: 0, saturation: 0, brightness: 0, alpha: 50)   // Light grey
-for x in stride(from: 0, through: canvas.width, by: 50) {                   // Vertical lines
+for x in stride(from: 0, through: canvas.width, by: 20) {                   // Vertical lines
+    if x % 100 == 0 {
+        canvas.defaultLineWidth = 2
+    } else {
+        canvas.defaultLineWidth = 1
+    }
     canvas.drawLine(fromX: x, fromY: 0, toX: x, toY: canvas.height)
 }
 for y in stride(from: 0, through: canvas.height, by: 50) {                  // Horizontal lines
+    if y % 100 == 0 {
+        canvas.defaultLineWidth = 2
+    } else {
+        canvas.defaultLineWidth = 1
+    }
     canvas.drawLine(fromX: 0, fromY: y, toX: canvas.width, toY: y)
 }
+
+// Draw
 
 /*:
  ## Template code
