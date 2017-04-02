@@ -160,7 +160,39 @@ canvas.drawRectangle(centreX: 20, centreY: 300, width: 10, height: 100)
 canvas.fillColor = customBrown
 canvas.drawRectangle(centreX: 10, centreY: 300, width: 10, height: 100)
 
+// DRAW CONNECTING RECTANGLES (LOWER)
 
+// White
+canvas.fillColor = Color.white
+canvas.drawRectangle(centreX: 80, centreY: 100, width: 10, height: 100)
+
+// Brown
+canvas.fillColor = customBrown
+canvas.drawRectangle(centreX: 70, centreY: 100, width: 10, height: 100)
+
+// Orange
+canvas.fillColor = customOrange
+canvas.drawRectangle(centreX: 60, centreY: 100, width: 10, height: 100)
+
+// Yellow
+canvas.fillColor = customYellow
+canvas.drawRectangle(centreX: 50, centreY: 100, width: 10, height: 100)
+
+// White
+canvas.fillColor = Color.white
+canvas.drawRectangle(centreX: 40, centreY: 100, width: 10, height: 100)
+
+// Yellow
+canvas.fillColor = customYellow
+canvas.drawRectangle(centreX: 30, centreY: 100, width: 10, height: 100)
+
+// Orange
+canvas.fillColor = customOrange
+canvas.drawRectangle(centreX: 20, centreY: 100, width: 10, height: 100)
+
+// Brown
+canvas.fillColor = customBrown
+canvas.drawRectangle(centreX: 10, centreY: 100, width: 10, height: 100)
 
 /*:
  ## Template code
