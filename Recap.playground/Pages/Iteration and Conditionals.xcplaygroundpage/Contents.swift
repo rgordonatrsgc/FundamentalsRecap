@@ -34,13 +34,16 @@ canvas.drawShapesWithBorders = false
 canvas.translate(byX: 200, byY: 200)
 
 // Use a loop to draw many ellipses
-for i in stride(from: 0, to: 360, by: 10) {
+for i in stride(from: 0, to: 180, by: 10) {
     
     // Rotate the canvas by 10 degrees each time
     canvas.rotate(by: 10)
     
+    // Change the fill colour
+    canvas.fillColor = Color(hue: i * 2, saturation: 100, brightness: 100, alpha: 50)
+    
     // Draw an ellipse at current origin location (middle of canvas)
-    canvas.drawEllipse(centreX: 0, centreY: 0, width: 20, height: 300)
+    canvas.drawEllipse(centreX: 0, centreY: 0, width: 300, height: 20)
 }
 
 /*:
