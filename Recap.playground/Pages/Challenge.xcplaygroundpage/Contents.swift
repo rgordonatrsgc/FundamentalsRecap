@@ -25,7 +25,9 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 600, height: 400)
+let canvas = Canvas(width: 580, height: 400)
+
+canvas.highPerformance = true
 
 // Draw a grid so I can plan out sizes
 canvas.lineColor = Color(hue: 0, saturation: 0, brightness: 0, alpha: 50)   // Light grey
@@ -54,145 +56,159 @@ let customBrown = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
 let customOrange = Color(hue: 22, saturation: 93, brightness: 90, alpha: 100)
 let customYellow = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
 
-// LEFT UPPER CIRCLE
+// Translate the origin 80 to the left
+canvas.translate(byX: -80, byY: 0)
 
-// Draw brown circle
-canvas.fillColor = customBrown
-canvas.drawEllipse(centreX: 40, centreY: 350, width: 70, height: 70)
+// Based on grid, need nine iterations of pattern to completely cover canvas
+// Start to left of canvas and move across
+for x in stride(from: -40, through: 640, by: 80) {
+    
+    // LEFT UPPER CIRCLE
+    
+    // Draw brown circle
+    canvas.fillColor = customBrown
+    canvas.drawEllipse(centreX: 40, centreY: 350, width: 70, height: 70)
+    
+    // Draw orange circle
+    canvas.fillColor = customOrange
+    canvas.drawEllipse(centreX: 40, centreY: 350, width: 50, height: 50)
+    
+    // Draw yellow circle
+    canvas.fillColor = customYellow
+    canvas.drawEllipse(centreX: 40, centreY: 350, width: 30, height: 30)
+    
+    // Draw white circle
+    canvas.fillColor = Color.white
+    canvas.drawEllipse(centreX: 40, centreY: 350, width: 10, height: 10)
+    
+    // RIGHT UPPER CIRCLE
+    
+    // Draw yellow circle
+    canvas.fillColor = customYellow
+    canvas.drawEllipse(centreX: 80, centreY: 250, width: 70, height: 70)
+    
+    // Draw orange circle
+    canvas.fillColor = customOrange
+    canvas.drawEllipse(centreX: 80, centreY: 250, width: 50, height: 50)
+    
+    // Draw brown circle
+    canvas.fillColor = customBrown
+    canvas.drawEllipse(centreX: 80, centreY: 250, width: 30, height: 30)
+    
+    // Draw white circle
+    canvas.fillColor = Color.white
+    canvas.drawEllipse(centreX: 80, centreY: 250, width: 10, height: 10)
+    
+    // RIGHT LOWER CIRCLE
+    
+    // Draw yellow circle
+    canvas.fillColor = customYellow
+    canvas.drawEllipse(centreX: 80, centreY: 150, width: 70, height: 70)
+    
+    // Draw orange circle
+    canvas.fillColor = customOrange
+    canvas.drawEllipse(centreX: 80, centreY: 150, width: 50, height: 50)
+    
+    // Draw brown circle
+    canvas.fillColor = customBrown
+    canvas.drawEllipse(centreX: 80, centreY: 150, width: 30, height: 30)
+    
+    // Draw white circle
+    canvas.fillColor = Color.white
+    canvas.drawEllipse(centreX: 80, centreY: 150, width: 10, height: 10)
+    
+    // LEFT LOWER CIRCLE
+    
+    // Draw brown circle
+    canvas.fillColor = customBrown
+    canvas.drawEllipse(centreX: 40, centreY: 50, width: 70, height: 70)
+    
+    // Draw orange circle
+    canvas.fillColor = customOrange
+    canvas.drawEllipse(centreX: 40, centreY: 50, width: 50, height: 50)
+    
+    // Draw yellow circle
+    canvas.fillColor = customYellow
+    canvas.drawEllipse(centreX: 40, centreY: 50, width: 30, height: 30)
+    
+    // Draw white circle
+    canvas.fillColor = Color.white
+    canvas.drawEllipse(centreX: 40, centreY: 50, width: 10, height: 10)
+    
+    // DRAW CONNECTING RECTANGLES (UPPER)
+    
+    // White
+    canvas.fillColor = Color.white
+    canvas.drawRectangle(centreX: 80, centreY: 300, width: 10, height: 100)
+    
+    // Brown
+    canvas.fillColor = customBrown
+    canvas.drawRectangle(centreX: 70, centreY: 300, width: 10, height: 100)
+    
+    // Orange
+    canvas.fillColor = customOrange
+    canvas.drawRectangle(centreX: 60, centreY: 300, width: 10, height: 100)
+    
+    // Yellow
+    canvas.fillColor = customYellow
+    canvas.drawRectangle(centreX: 50, centreY: 300, width: 10, height: 100)
+    
+    // White
+    canvas.fillColor = Color.white
+    canvas.drawRectangle(centreX: 40, centreY: 300, width: 10, height: 100)
+    
+    // Yellow
+    canvas.fillColor = customYellow
+    canvas.drawRectangle(centreX: 30, centreY: 300, width: 10, height: 100)
+    
+    // Orange
+    canvas.fillColor = customOrange
+    canvas.drawRectangle(centreX: 20, centreY: 300, width: 10, height: 100)
+    
+    // Brown
+    canvas.fillColor = customBrown
+    canvas.drawRectangle(centreX: 10, centreY: 300, width: 10, height: 100)
+    
+    // DRAW CONNECTING RECTANGLES (LOWER)
+    
+    // White
+    canvas.fillColor = Color.white
+    canvas.drawRectangle(centreX: 80, centreY: 100, width: 10, height: 100)
+    
+    // Brown
+    canvas.fillColor = customBrown
+    canvas.drawRectangle(centreX: 70, centreY: 100, width: 10, height: 100)
+    
+    // Orange
+    canvas.fillColor = customOrange
+    canvas.drawRectangle(centreX: 60, centreY: 100, width: 10, height: 100)
+    
+    // Yellow
+    canvas.fillColor = customYellow
+    canvas.drawRectangle(centreX: 50, centreY: 100, width: 10, height: 100)
+    
+    // White
+    canvas.fillColor = Color.white
+    canvas.drawRectangle(centreX: 40, centreY: 100, width: 10, height: 100)
+    
+    // Yellow
+    canvas.fillColor = customYellow
+    canvas.drawRectangle(centreX: 30, centreY: 100, width: 10, height: 100)
+    
+    // Orange
+    canvas.fillColor = customOrange
+    canvas.drawRectangle(centreX: 20, centreY: 100, width: 10, height: 100)
+    
+    // Brown
+    canvas.fillColor = customBrown
+    canvas.drawRectangle(centreX: 10, centreY: 100, width: 10, height: 100)
 
-// Draw orange circle
-canvas.fillColor = customOrange
-canvas.drawEllipse(centreX: 40, centreY: 350, width: 50, height: 50)
+    // TRANSLATE ORIGIN
+    // Translate the origin 80 to the right
+    canvas.translate(byX: 80, byY: 0)
+    
+}
 
-// Draw yellow circle
-canvas.fillColor = customYellow
-canvas.drawEllipse(centreX: 40, centreY: 350, width: 30, height: 30)
-
-// Draw white circle
-canvas.fillColor = Color.white
-canvas.drawEllipse(centreX: 40, centreY: 350, width: 10, height: 10)
-
-// RIGHT UPPER CIRCLE
-
-// Draw yellow circle
-canvas.fillColor = customYellow
-canvas.drawEllipse(centreX: 80, centreY: 250, width: 70, height: 70)
-
-// Draw orange circle
-canvas.fillColor = customOrange
-canvas.drawEllipse(centreX: 80, centreY: 250, width: 50, height: 50)
-
-// Draw brown circle
-canvas.fillColor = customBrown
-canvas.drawEllipse(centreX: 80, centreY: 250, width: 30, height: 30)
-
-// Draw white circle
-canvas.fillColor = Color.white
-canvas.drawEllipse(centreX: 80, centreY: 250, width: 10, height: 10)
-
-// RIGHT LOWER CIRCLE
-
-// Draw yellow circle
-canvas.fillColor = customYellow
-canvas.drawEllipse(centreX: 80, centreY: 150, width: 70, height: 70)
-
-// Draw orange circle
-canvas.fillColor = customOrange
-canvas.drawEllipse(centreX: 80, centreY: 150, width: 50, height: 50)
-
-// Draw brown circle
-canvas.fillColor = customBrown
-canvas.drawEllipse(centreX: 80, centreY: 150, width: 30, height: 30)
-
-// Draw white circle
-canvas.fillColor = Color.white
-canvas.drawEllipse(centreX: 80, centreY: 150, width: 10, height: 10)
-
-// LEFT LOWER CIRCLE
-
-// Draw brown circle
-canvas.fillColor = customBrown
-canvas.drawEllipse(centreX: 40, centreY: 50, width: 70, height: 70)
-
-// Draw orange circle
-canvas.fillColor = customOrange
-canvas.drawEllipse(centreX: 40, centreY: 50, width: 50, height: 50)
-
-// Draw yellow circle
-canvas.fillColor = customYellow
-canvas.drawEllipse(centreX: 40, centreY: 50, width: 30, height: 30)
-
-// Draw white circle
-canvas.fillColor = Color.white
-canvas.drawEllipse(centreX: 40, centreY: 50, width: 10, height: 10)
-
-// DRAW CONNECTING RECTANGLES (UPPER)
-
-// White
-canvas.fillColor = Color.white
-canvas.drawRectangle(centreX: 80, centreY: 300, width: 10, height: 100)
-
-// Brown
-canvas.fillColor = customBrown
-canvas.drawRectangle(centreX: 70, centreY: 300, width: 10, height: 100)
-
-// Orange
-canvas.fillColor = customOrange
-canvas.drawRectangle(centreX: 60, centreY: 300, width: 10, height: 100)
-
-// Yellow
-canvas.fillColor = customYellow
-canvas.drawRectangle(centreX: 50, centreY: 300, width: 10, height: 100)
-
-// White
-canvas.fillColor = Color.white
-canvas.drawRectangle(centreX: 40, centreY: 300, width: 10, height: 100)
-
-// Yellow
-canvas.fillColor = customYellow
-canvas.drawRectangle(centreX: 30, centreY: 300, width: 10, height: 100)
-
-// Orange
-canvas.fillColor = customOrange
-canvas.drawRectangle(centreX: 20, centreY: 300, width: 10, height: 100)
-
-// Brown
-canvas.fillColor = customBrown
-canvas.drawRectangle(centreX: 10, centreY: 300, width: 10, height: 100)
-
-// DRAW CONNECTING RECTANGLES (LOWER)
-
-// White
-canvas.fillColor = Color.white
-canvas.drawRectangle(centreX: 80, centreY: 100, width: 10, height: 100)
-
-// Brown
-canvas.fillColor = customBrown
-canvas.drawRectangle(centreX: 70, centreY: 100, width: 10, height: 100)
-
-// Orange
-canvas.fillColor = customOrange
-canvas.drawRectangle(centreX: 60, centreY: 100, width: 10, height: 100)
-
-// Yellow
-canvas.fillColor = customYellow
-canvas.drawRectangle(centreX: 50, centreY: 100, width: 10, height: 100)
-
-// White
-canvas.fillColor = Color.white
-canvas.drawRectangle(centreX: 40, centreY: 100, width: 10, height: 100)
-
-// Yellow
-canvas.fillColor = customYellow
-canvas.drawRectangle(centreX: 30, centreY: 100, width: 10, height: 100)
-
-// Orange
-canvas.fillColor = customOrange
-canvas.drawRectangle(centreX: 20, centreY: 100, width: 10, height: 100)
-
-// Brown
-canvas.fillColor = customBrown
-canvas.drawRectangle(centreX: 10, centreY: 100, width: 10, height: 100)
 
 /*:
  ## Template code
