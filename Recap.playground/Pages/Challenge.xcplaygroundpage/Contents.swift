@@ -46,7 +46,12 @@ for y in stride(from: 0, through: canvas.height, by: 50) {                  // H
     canvas.drawLine(fromX: 0, fromY: y, toX: canvas.width, toY: y)
 }
 
-// Draw
+// No borders
+canvas.drawShapesWithBorders = false
+
+// Draw upper brown circle
+canvas.fillColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
+canvas.drawEllipse(centreX: 50, centreY: 355, width: 80, height: 80)
 
 /*:
  ## Template code
