@@ -53,6 +53,10 @@ canvas.drawShapesWithBorders = false
 canvas.fillColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
 canvas.drawEllipse(centreX: 50, centreY: 355, width: 80, height: 80)
 
+// Draw upper orangle circle
+canvas.fillColor = Color(hue: 22, saturation: 93, brightness: 90, alpha: 100)
+canvas.drawEllipse(centreX: 50, centreY: 355, width: 60, height: 60)
+
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
