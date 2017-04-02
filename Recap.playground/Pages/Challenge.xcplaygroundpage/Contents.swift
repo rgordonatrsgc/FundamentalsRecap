@@ -25,9 +25,16 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 400)
+let canvas = Canvas(width: 600, height: 400)
 
-// Replace this comment and add your code below
+// Draw a grid so I can plan out sizes
+canvas.lineColor = Color(hue: 0, saturation: 0, brightness: 0, alpha: 50)   // Light grey
+for x in stride(from: 0, through: canvas.width, by: 50) {                   // Vertical lines
+    canvas.drawLine(fromX: x, fromY: 0, toX: x, toY: canvas.height)
+}
+for y in stride(from: 0, through: canvas.height, by: 50) {                  // Horizontal lines
+    canvas.drawLine(fromX: 0, fromY: y, toX: canvas.width, toY: y)
+}
 
 /*:
  ## Template code
