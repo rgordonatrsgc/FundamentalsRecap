@@ -49,6 +49,8 @@ for y in stride(from: 0, through: canvas.height, by: 50) {                  // H
 // No borders
 canvas.drawShapesWithBorders = false
 
+// LEFT UPPER CIRCLE
+
 // Draw upper brown circle
 canvas.fillColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
 canvas.drawEllipse(centreX: 50, centreY: 350, width: 80, height: 80)
@@ -64,6 +66,24 @@ canvas.drawEllipse(centreX: 50, centreY: 350, width: 40, height: 40)
 // Draw upper white circle
 canvas.fillColor = Color.white
 canvas.drawEllipse(centreX: 50, centreY: 350, width: 20, height: 20)
+
+// LEFT LOWER CIRCLE
+
+// Draw upper brown circle
+canvas.fillColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
+canvas.drawEllipse(centreX: 50, centreY: 50, width: 80, height: 80)
+
+// Draw upper orange circle
+canvas.fillColor = Color(hue: 22, saturation: 93, brightness: 90, alpha: 100)
+canvas.drawEllipse(centreX: 50, centreY: 50, width: 60, height: 60)
+
+// Draw upper yellow circle
+canvas.fillColor = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+canvas.drawEllipse(centreX: 50, centreY: 50, width: 40, height: 40)
+
+// Draw upper white circle
+canvas.fillColor = Color.white
+canvas.drawEllipse(centreX: 50, centreY: 50, width: 20, height: 20)
 
 
 /*:
