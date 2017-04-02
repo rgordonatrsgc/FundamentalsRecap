@@ -27,8 +27,12 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 500, height: 400)
 
-// Replace this comment and add your code below 
+// No borders
+canvas.drawShapesWithBorders = false
 
+// Draw the red circle
+canvas.fillColor = Color.red
+canvas.drawEllipse(centreX: 150, centreY: 150, width: 200, height: 200)
 
 /*:
  ## Template code
