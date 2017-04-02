@@ -41,15 +41,18 @@ canvas.defaultLineWidth = 4
 //              I've added comments below to indicate what's happening
 canvas.translate(byX: 200, byY: 200)
 
+// Rotate the origin too
+canvas.rotate(by: 45)
+
 // Draw the vertical axis and label it
 canvas.drawLine(fromX: 0, fromY: -400, toX: 0, toY: 400)    // Since origin is shifted 200 over, this draws 
                                                             // in the middle of the screen
-canvas.drawText(message: "y", size: 24, x: 10, y: 175)
+canvas.drawText(message: "y", size: 24, x: 10, y: 225)
 
 // Draw the horizontal axis and label it 
 canvas.drawLine(fromX: -400, fromY: 0, toX: 400, toY: 0)   // Since origin is shifted 200 up, this draws
                                                            // in the middle of the screen
-canvas.drawText(message: "x", size: 24, x: 175, y: 10)
+canvas.drawText(message: "x", size: 24, x: 225, y: 10)
 
 /*:
  ## Challenge 1
