@@ -41,6 +41,11 @@ canvas.drawEllipse(centreX: 125, centreY: 150, width: 175, height: 175)
 //
 canvas.fillColor = Color(hue: 43, saturation: 100, brightness: 94, alpha: 100)
 canvas.drawRoundedRectangle(centreX: 350, centreY: 200, width: 125, height: 175, borderWidth: 1, xRadius: 25, yRadius: 25)
+
+// Draw the blue rectangle
+canvas.fillColor = Color(hue: 222, saturation: 100, brightness: 100, alpha: 75)
+canvas.drawRectangle(centreX: 250, centreY: 190, width: 140, height: 300)
+
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
