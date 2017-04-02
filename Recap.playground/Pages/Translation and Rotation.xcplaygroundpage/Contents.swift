@@ -34,12 +34,21 @@ let canvas = Canvas(width: 400, height: 400)
 // Draw slightly thicker lines
 canvas.defaultLineWidth = 4
 
+// Translate the origin
+//
+// OBSERVATION: I see that the origin of the canvas has moved.
+//              nothing else has changed except the line of code added below.
+//              I've added comments below to indicate what's happening
+canvas.translate(byX: 200, byY: 200)
+
 // Draw the vertical axis and label it
-canvas.drawLine(fromX: 0, fromY: -400, toX: 0, toY: 400)
+canvas.drawLine(fromX: 0, fromY: -400, toX: 0, toY: 400)    // Since origin is shifted 200 over, this draws 
+                                                            // in the middle of the screen
 canvas.drawText(message: "y", size: 24, x: 10, y: 375)
 
 // Draw the horizontal axis and label it 
-canvas.drawLine(fromX: -400, fromY: 0, toX: 400, toY: 0)
+canvas.drawLine(fromX: -400, fromY: 0, toX: 400, toY: 0)   // Since origin is shifted 200 up, this draws
+                                                           // in the middle of the screen
 canvas.drawText(message: "x", size: 24, x: 375, y: 10)
 
 /*:
