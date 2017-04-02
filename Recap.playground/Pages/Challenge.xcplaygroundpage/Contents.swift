@@ -49,18 +49,23 @@ for y in stride(from: 0, through: canvas.height, by: 50) {                  // H
 // No borders
 canvas.drawShapesWithBorders = false
 
+// Save colours in objects (making code more readable below)
+let customBrown = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
+let customOrange = Color(hue: 22, saturation: 93, brightness: 90, alpha: 100)
+let customYellow = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+
 // LEFT UPPER CIRCLE
 
 // Draw brown circle
-canvas.fillColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
+canvas.fillColor = customBrown
 canvas.drawEllipse(centreX: 50, centreY: 350, width: 80, height: 80)
 
 // Draw orange circle
-canvas.fillColor = Color(hue: 22, saturation: 93, brightness: 90, alpha: 100)
+canvas.fillColor = customOrange
 canvas.drawEllipse(centreX: 50, centreY: 350, width: 60, height: 60)
 
 // Draw yellow circle
-canvas.fillColor = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+canvas.fillColor = customYellow
 canvas.drawEllipse(centreX: 50, centreY: 350, width: 40, height: 40)
 
 // Draw white circle
@@ -70,15 +75,15 @@ canvas.drawEllipse(centreX: 50, centreY: 350, width: 20, height: 20)
 // RIGHT UPPER CIRCLE
 
 // Draw yellow circle
-canvas.fillColor = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+canvas.fillColor = customYellow
 canvas.drawEllipse(centreX: 100, centreY: 250, width: 80, height: 80)
 
 // Draw orange circle
-canvas.fillColor = Color(hue: 22, saturation: 93, brightness: 90, alpha: 100)
+canvas.fillColor = customOrange
 canvas.drawEllipse(centreX: 100, centreY: 250, width: 60, height: 60)
 
 // Draw brown circle
-canvas.fillColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
+canvas.fillColor = customBrown
 canvas.drawEllipse(centreX: 100, centreY: 250, width: 40, height: 40)
 
 // Draw white circle
@@ -88,15 +93,15 @@ canvas.drawEllipse(centreX: 100, centreY: 250, width: 20, height: 20)
 // RIGHT lower CIRCLE
 
 // Draw yellow circle
-canvas.fillColor = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+canvas.fillColor = customYellow
 canvas.drawEllipse(centreX: 100, centreY: 150, width: 80, height: 80)
 
 // Draw orange circle
-canvas.fillColor = Color(hue: 22, saturation: 93, brightness: 90, alpha: 100)
+canvas.fillColor = customOrange
 canvas.drawEllipse(centreX: 100, centreY: 150, width: 60, height: 60)
 
 // Draw brown circle
-canvas.fillColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
+canvas.fillColor = customBrown
 canvas.drawEllipse(centreX: 100, centreY: 150, width: 40, height: 40)
 
 // Draw white circle
@@ -106,15 +111,15 @@ canvas.drawEllipse(centreX: 100, centreY: 150, width: 20, height: 20)
 // LEFT LOWER CIRCLE
 
 // Draw brown circle
-canvas.fillColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
+canvas.fillColor = customBrown
 canvas.drawEllipse(centreX: 50, centreY: 50, width: 80, height: 80)
 
 // Draw orange circle
-canvas.fillColor = Color(hue: 22, saturation: 93, brightness: 90, alpha: 100)
+canvas.fillColor = customOrange
 canvas.drawEllipse(centreX: 50, centreY: 50, width: 60, height: 60)
 
 // Draw yellow circle
-canvas.fillColor = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+canvas.fillColor = customYellow
 canvas.drawEllipse(centreX: 50, centreY: 50, width: 40, height: 40)
 
 // Draw white circle
