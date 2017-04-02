@@ -21,7 +21,17 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 400, height: 400)
 
-// Replace this comment and add your code below
+// MAKING A PLAN
+//
+// OK, clearly this task involves rotation.
+// I noticed that the size of the ellipses changes (alternating large and small).
+// The hue changes (from red around the spectrum and back to red).
+
+// No borders
+canvas.drawShapesWithBorders = false
+
+// Draw an ellipse at current origin location
+canvas.drawEllipse(centreX: 0, centreY: 0, width: 20, height: 300)
 
 /*:
  ## Template code
