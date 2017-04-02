@@ -30,6 +30,9 @@ let canvas = Canvas(width: 400, height: 400)
 // No borders
 canvas.drawShapesWithBorders = false
 
+// Translate the origin
+canvas.translate(byX: 200, byY: 200)
+
 // Draw an ellipse at current origin location
 canvas.drawEllipse(centreX: 0, centreY: 0, width: 20, height: 300)
 
