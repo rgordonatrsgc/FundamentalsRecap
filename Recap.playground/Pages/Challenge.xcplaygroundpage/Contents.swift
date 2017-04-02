@@ -53,9 +53,18 @@ canvas.drawShapesWithBorders = false
 canvas.fillColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
 canvas.drawEllipse(centreX: 50, centreY: 355, width: 80, height: 80)
 
-// Draw upper orangle circle
+// Draw upper orange circle
 canvas.fillColor = Color(hue: 22, saturation: 93, brightness: 90, alpha: 100)
 canvas.drawEllipse(centreX: 50, centreY: 355, width: 60, height: 60)
+
+// Draw upper yellow circle
+canvas.fillColor = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+canvas.drawEllipse(centreX: 50, centreY: 355, width: 40, height: 40)
+
+// Draw upper white circle
+canvas.fillColor = Color.white
+canvas.drawEllipse(centreX: 50, centreY: 355, width: 20, height: 20)
+
 
 /*:
  ## Template code
