@@ -85,6 +85,23 @@ canvas.drawEllipse(centreX: 100, centreY: 250, width: 40, height: 40)
 canvas.fillColor = Color.white
 canvas.drawEllipse(centreX: 100, centreY: 250, width: 20, height: 20)
 
+// RIGHT lower CIRCLE
+
+// Draw yellow circle
+canvas.fillColor = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+canvas.drawEllipse(centreX: 100, centreY: 150, width: 80, height: 80)
+
+// Draw orange circle
+canvas.fillColor = Color(hue: 22, saturation: 93, brightness: 90, alpha: 100)
+canvas.drawEllipse(centreX: 100, centreY: 150, width: 60, height: 60)
+
+// Draw brown circle
+canvas.fillColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
+canvas.drawEllipse(centreX: 100, centreY: 150, width: 40, height: 40)
+
+// Draw white circle
+canvas.fillColor = Color.white
+canvas.drawEllipse(centreX: 100, centreY: 150, width: 20, height: 20)
 
 // LEFT LOWER CIRCLE
 
