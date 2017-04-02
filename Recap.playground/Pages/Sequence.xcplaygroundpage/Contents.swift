@@ -32,8 +32,15 @@ canvas.drawShapesWithBorders = false
 
 // Draw the red circle
 canvas.fillColor = Color.red
-canvas.drawEllipse(centreX: 150, centreY: 150, width: 200, height: 200)
+canvas.drawEllipse(centreX: 125, centreY: 150, width: 175, height: 175)
 
+// Draw the yellow rounded rectangle
+//
+// NOTE: Used this document to find accurate colour...
+// http://russellgordon.ca/rsgc/2016-17/ics2o/HSB_Colour_Model_-_Summary_-_Swift_3.pdf
+//
+canvas.fillColor = Color(hue: 43, saturation: 100, brightness: 94, alpha: 100)
+canvas.drawRoundedRectangle(centreX: 350, centreY: 200, width: 125, height: 175, borderWidth: 1, xRadius: 25, yRadius: 25)
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
